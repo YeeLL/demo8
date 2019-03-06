@@ -3,7 +3,7 @@ package com.yee.filemanager.mapper;
 import com.yee.filemanager.bean.Employee;
 import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface EmployeeMapper {
     public Employee getEmployeeById(int id);
 

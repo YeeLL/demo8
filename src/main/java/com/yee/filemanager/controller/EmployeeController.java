@@ -15,8 +15,12 @@ public class EmployeeController {
     @Autowired
     EmployeeServiceImpl employeeService;
 
+    public EmployeeController() {
+        System.out.println("employeeController");
+    }
+
     @ResponseBody
-    @RequestMapping("/getEmployeeById")
+    @RequestMapping("/getEmployeeById/{id}")
     public Employee getEmployeeById(@PathVariable("id")int id){
         return  employeeService.getEmployeeById(id);
     }
